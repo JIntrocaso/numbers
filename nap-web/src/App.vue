@@ -24,6 +24,12 @@ Amplify.configure(awsconfig);
   </header> -->
 
   <NapHeader title="My Cool Site" />
+  <Authenticator>
+    <template v-slot="{ user, signOut }">
+      <h1>Hello {{ user.username }}</h1>
+      <button @click="signOut">Sign Out</button>
+    </template>
+  </Authenticator>
   <RouterView />
 </template>
 
