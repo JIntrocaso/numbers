@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-napweb-dev-212725-authRole",
+      "UnauthRoleArn": "arn:aws:iam::146923672504:role/amplify-napweb-dev-212725-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::146923672504:role/amplify-napweb-dev-212725-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-napweb-dev-212725-deployment",
+      "UnauthRoleName": "amplify-napweb-dev-212725-unauthRole",
+      "StackName": "amplify-napweb-dev-212725",
+      "StackId": "arn:aws:cloudformation:us-east-1:146923672504:stack/amplify-napweb-dev-212725/7a055ba0-f6ad-11ed-bda4-0a13accdaa6d",
+      "AmplifyAppId": "df93vms0w9t91"
+    },
+    "categories": {
+      "auth": {
+        "napweba37d14f5": {}
+      }
+    }
+  }
+}

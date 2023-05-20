@@ -35,7 +35,7 @@ export default defineComponent({
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #f5f5f5;
+  background-color: black;
 }
 
 .nap-header-title {
