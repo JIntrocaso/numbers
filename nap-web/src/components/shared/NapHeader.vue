@@ -4,13 +4,16 @@
     <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/help">Help</RouterLink>
       </nav>
-    <button class="nap-header-button" @click="signIn">Sign In</button>
+    <button class="nap-header-button" @click="openSignInModal">Sign In</button>
   </header>
+  <sign-in-modal v-if="showSignInModal" @close="closeSignInModal" />
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { ref, defineComponent } from 'vue';
+import SignInModal from '@/components/shared/SignInModal.vue';
 
 export default defineComponent({
   name: 'NapHeader',
@@ -20,13 +23,29 @@ export default defineComponent({
       required: true
     }
   },
-  setup(props) {
+  components: {
+    SignInModal
+  },
+  setup() {
+    const showSignInModal = ref(false);
+
+    const openSignInModal = () => {
+      showSignInModal.value = true;
+    };
+
+    const closeSignInModal = () => {
+      showSignInModal.value = false;
+    };
+
     const signIn = () => {
       // Add your sign-in logic here
       console.log('User signed in');
     };
 
     return {
+      showSignInModal,
+      openSignInModal,
+      closeSignInModal,
       signIn
     };
   }
