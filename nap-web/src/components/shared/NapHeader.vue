@@ -1,6 +1,10 @@
 <template>
   <header class="nap-header">
     <div class="nap-header-title">{{ title }}</div>
+    <nav>
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/about">About</RouterLink>
+      </nav>
     <button class="nap-header-button" @click="signIn">Sign In</button>
   </header>
 </template>

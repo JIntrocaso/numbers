@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { Authenticator } from '@aws-amplify-vue/ui-vue'
-import { RouterLink, RouterView } from 'vue-router'
+import { Authenticator } from '@aws-amplify/ui-vue'
+import { RouterView } from 'vue-router'
 import NapHeader from './components/shared/NapHeader.vue'
-import { Amplify, Auth } from 'aws-amplify';
+import { Amplify } from 'aws-amplify';
 import awsconfig from './aws-exports';
 
 
