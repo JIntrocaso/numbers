@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Authenticator } from '@aws-amplify/ui-vue'
 import { RouterView } from 'vue-router'
 import NapHeader from './components/shared/NapHeader.vue'
 import { Amplify } from 'aws-amplify';
@@ -10,26 +9,7 @@ Amplify.configure(awsconfig);
 </script>
 
 <template>
-  <!-- <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header> -->
-
   <NapHeader title="My Cool Site" />
-  <Authenticator>
-    <template v-slot="{ user, signOut }">
-      <h1>Hello {{ user.username }}</h1>
-      <button @click="signOut">Sign Out</button>
-    </template>
-  </Authenticator>
   <RouterView />
 </template>
 
